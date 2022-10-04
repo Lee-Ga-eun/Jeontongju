@@ -56,7 +56,7 @@ def join_img():
     img_file=pd.read_csv('./uploads/save_img.csv')
     jeon_file=pd.read_csv('./uploads/origin_data.csv')
     merged=pd.merge(jeon_file,img_file,how='left',on="전통주명") # 합치기
-    #merged=pd.merge(left=jeon_file, right=img_file, how="inner", on='전통주명')
+    #merged=pd.merge(left=jeon_file, right=img_file, how="inner", on='전통주명') --> inner.csv에 저장
 #pd.merge(left = DF1 , right = DF2, how = "inner", on = "이름")
 
     with open('./uploads/jeontongju.csv','w',newline='') as f:
