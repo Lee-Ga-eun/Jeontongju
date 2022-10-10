@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="../public/question.css">
+</head>
+<body>
+
+    <%- include('nav.html') %>  <!-- 상대경로의 html삽입-->
+    
+    <h1>질문 입력</h1>
+    <form action="/api/auth/test" method="POST">
+        <p>
+            <label for="id">질문 번호</label>
+            <input type="text" name="id" id="id">
+        </p>
+
+        <p>
+            <label for="id">질문</label>
+            <input type="text" name="content" id="content">
+        </p>
+        <p>
+            <label for="id">답1</label>
+            <input type="text" name="answer1" id="content">
+        </p>
+        <p>
+            <label for="id">답2</label>
+            <input type="text" name="answer2" id="content">
+        </p>
+        
+        <p>
+            <input type="submit" value="등록">
+        </p>
+    </form>
+</body>
+</html>

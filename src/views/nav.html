@@ -1,0 +1,53 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="../public/nav.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7f7b206c05.js" crossorigin="anonymous"></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav-item1">
+    
+   
+    <div class="collapse navbar-collapse" id="navbarNav">
+      
+          <a class="nav-link" href="/index"><img src="../uploads/home.png"></a>
+          
+          <a class="nav-link" href="/index"> Home <span class="sr-only">(current)</span></a>
+        
+        
+          <a class="nav-link" href="/list">목록</a>
+        
+        
+          <a class="nav-link" href="/write">글쓰기</a>
+        
+        
+        <i class="fa-solid fa-arrow-left-long" id="test1_div" onclick="div_hide();"></i>
+        <input type="hidden" i class="fa-solid fa-arrow-right-long" id="test2_div" onclick="div_show();"></i>
+        <div class="navbar-nav">
+          <a href="/list">
+            <i class="fa-solid fa-magnifying-glass" id="account"></i>
+          </a>
+          <i class="fa-regular fa-user"></i>
+        <% if(isAuthenticated){ %> <!--로그인이 된 경우 -->
+          <a href="/mypage/<%= currentUser.id %>" class="nav-link1">마이페이지</a> &nbsp;
+          <a href="/logout" class="nav-link1">로그아웃</a>
+        <% } else { %>
+          <a href="/register" class="nav-link1">회원가입</a>
+          <a href="/login" class="nav-link1">로그인</a>
+        <% } %>
+        </div>
+        
+    </div>
+  </nav>
+
+<script>
+    //보이기
+    function div_show() {document.getElementById("test_div").style.display = "block";}
+    //숨기기 
+    function div_hide() {
+      document.getElementById("test_div").style.display = "none";
+      document.getElementById("test2_div").style.display = "block";
+  }
+
+  </script>

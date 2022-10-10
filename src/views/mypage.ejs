@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+   <link rel="stylesheet" href="../public/mypage.css">
+</head>
+<body>
+
+    <%- include('nav.html') %>  <!-- 상대경로의 html삽입-->
+<div id="container">
+    
+    <div id="content" style="background-color: #fff;">
+    <div class="c_header">
+        <h2><%= 사용자.id %>님의 마이페이지</h2>
+    </div>
+    <form action="/mypage?_method=PUT" id="profileForm" method="POST" enctype="multipart/form-data">
+              <!--메소드오버라이드를 설치하여 method는 post로 하되 action에 ?_method=PUT를 붙여주면
+                app.put이 HTTP 요청을 받을 수 있음-->
+                <input value="<%= 사용자._id %>" name="id" style="display : none">    <!--id를 만들기 위해 안보이는 폼 형성-->
+                <input type="hidden" id="helpToken" name="token_help" value="iuoqbqc3pWebDFH2" />
+                <input type="hidden" id="deleteYn" name="deleteYn" value="N" />
+                <input type="hidden" id="ieLessThan9Yn" name="ieLessThan9Yn" value="N" />
+                <fieldset>  <!--form 요소를 그룹으로 묶는 태그-->
+                    <legend>프로필 수정</legend>  <!--form 요소를 그룹으로 묶는 fieldset에 제목을 붙이는 태그-->
+                    
+                    <table class="tbl_model">
+                        
+                        <colgroup>
+                            <col style="width:22%"><col>
+                        </colgroup>
+                        <tbody>
+                        <tr class="tr_model">
+                            <th class="th_class" scope="row">
+                                <div class="thcell">프로필 사진</div>
+                            </th>
+                            <td class="td_model">
+                                <div class="tdcell">
+                                    <div class="profile_photo">
+                                        <img id="img_section" src="https://static.nid.naver.com/images/web/user/default.png" width="100" height="100">
+                                        <span class="mask"></span>
+                                    </div>
+                                    <div class="btn_area_btn">
+                                        <span class="btn_file">
+                                            
+                                            <input type="file" id="upload_file" name="profileImage" accept="image/*" />
+                                        </span>
+                                        
+                                        
+                                        <a href="javascript:;" class="btn_model red"><b id="btnDelete" class="btn2" onclick="clickcr(this,'prf.delimg','','',event);">삭제</b></a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <script>
+                          const reader = new FileReader();
+                  
+                          reader.onload = (readerEvent) => {
+                              document.querySelector("#img_section").setAttribute("src", readerEvent.target.result);
+                              //파일을 읽는 이벤트가 발생하면 img_section의 src 속성을 readerEvent의 결과물로 대체함
+                          };
+                  
+                          document.querySelector("#upload_file").addEventListener("change", (changeEvent) => {
+                              //upload_file 에 이벤트리스너를 장착
+                  
+                              const imgFile = changeEvent.target.files[0];
+                              reader.readAsDataURL(imgFile);
+                              //업로드한 이미지의 URL을 reader에 등록
+                          })
+                      </script>
+                        <tr class="tr_model">
+                            <th class="th_class" scope="row">
+                                <div class="thcell"><label for="inpNickname">아이디</label></div>
+                            </th>
+                            <td class="td_model">
+                                <div class="tdcell">
+                                    <p class="contxt_webctrl nickname">
+                                        <input type="text" name="id" id="inpNickname" value="<%= 사용자.id %>" style="width:254px" onclick="clickcr(this,'prf.nick','','',event);">
+                                        <!-- Enter 입력으로 submit이 되는걸 방지하기 위한 Input -->
+                                        <input type="text" style="display: none;" >
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="tr_model">
+                          <th class="th_class" scope="row">
+                              <div class="thcell"><label for="inpNickname">비밀번호</label></div>
+                          </th>
+                          <td class="td_model">
+                              <div class="tdcell">
+                                  <p class="contxt_webctrl nickname">
+                                      <input type="text" name="pw1" id="inpNickname" value="<%= 사용자.password %>" style="width:254px" onclick="clickcr(this,'prf.nick','','',event);">
+                                      <!-- Enter 입력으로 submit이 되는걸 방지하기 위한 Input -->
+                                      <input type="text" style="display: none;" >
+                                  </p>,
+                              </div>
+                          </td>
+                      </tr>
+                      <tr class="tr_model">
+                        <th class="th_class" scope="row">
+                            <div class="thcell"><label for="inpNickname">이름</label></div>
+                        </th>
+                        <td class="td_model">
+                            <div class="tdcell">
+                                <p class="contxt_webctrl nickname">
+                                    <input type="text" name="name" id="inpNickname" value="<%= 사용자.name %>" style="width:254px" onclick="clickcr(this,'prf.nick','','',event);">
+                                    <!-- Enter 입력으로 submit이 되는걸 방지하기 위한 Input -->
+                                    <input type="text" style="display: none;" >
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                        </tbody>
+                    </table>
+            <div class="btn_wrap">
+                <a href="/mypage/<%= currentUser.id %>" class="btn_model green"><b id="btnConfirm" class="btn8">초기화</b></a>
+                <button type="submit" class="btn_model blue">수정</button>
+            </div>
+        </fieldset>
+       
+    </form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.556f1c82.css","mappings":"AAAA,IACI,iBACJ,CACA,MACI,gBAAgB,CAChB,iBACJ","sources":["Routes/Home.module.css"],"sourcesContent":["div{\n    text-align: center;\n}\ntable{\n    margin-left:auto;\n    margin-right:auto;\n}\n"],"names":[],"sourceRoot":""}

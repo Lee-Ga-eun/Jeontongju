@@ -1,0 +1,62 @@
+.btn_model{
+    text-decoration: none;
+    font-size:1rem;
+    color:white;
+    padding:10px 20px 10px 20px;
+    margin:20px;
+    display:inline-block;
+    border-radius: 10px;  /*외곽 둥글기 */
+    transition:all 0.1s;
+    text-shadow: 0px -2px rgba(0, 0, 0, 0.44);
+    font-family: 'Lobster', cursive;
+    
+
+
+}
+.btn_model.blue{
+    background-color:#1f75d9;
+    border-bottom:5px solid #165195;
+    border-top: #1f75d9;
+    border-right: #1f75d9;
+    border-left: #1f75d9;
+}
+
+.btn_model.red{
+    background-color: #ff521e;
+    border-bottom:5px solid #c1370e;
+    border-top: #ff521e;
+    border-right: #ff521e;
+    border-left: #ff521e;
+}
+
+.btn_model.green{
+    background-color: limegreen;
+    border-bottom:5px solid green;
+    border-top: limegreen;
+    border-right: limegreen;
+    border-left: limegreen;
+}
+
+.tbl_model{
+    text-align:center;
+    
+    margin-left: 10px;
+    
+    border: 1px solid black
+}
+
+.tr_model{
+    
+    border: 1px solid black
+}
+
+.td_model{
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.th_class{
+    background-color: snow;
+    border: 1px solid black;
+}
+

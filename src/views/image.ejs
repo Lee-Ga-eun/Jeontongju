@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+   <link rel="stylesheet" href="../public/image.css">
+</head>
+<body>
+    
+    
+    <h1>사진 업로드</h1>
+    <form action="/api/auth/image" method="POST" enctype="multipart/form-data">
+       
+        <p>
+        <input type="file" name="img" id="image">
+        </p>
+        <input type="submit" value="업로드"> 
+    </form>
+</body>
+</html>

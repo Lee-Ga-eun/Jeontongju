@@ -1,0 +1,109 @@
+.content{
+    text-align: center;
+}
+.answer{
+    text-align: center;
+}
+.submit{
+    display: block;
+    margin: auto;
+}
+#title {
+    text-align: center;
+}
+ 
+#content {
+    text-align: center;
+    display: none;
+}
+ 
+#result {
+    text-align: center;
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  .fadeIn{
+    animation: fadeIn;
+    animation-duration: 0.5s;
+  }
+  
+  .fadeOut{
+    animation: fadeOut;
+    animation-duration: 0.5s;
+  }
+  
+  #q{
+    background-color: palevioletred;
+    border-radius: 20px;
+  }
+  .answerList{
+    background-color: palevioletred;
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    border: 0px;
+    margin-top: 1%;
+    padding: 1%;
+  }
+
+  .answerList:hover, .answerList:focus {
+    background-color: pink;
+    
+  }
+
+  .status {
+    height: 20px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+  }
+  
+  .statusBar {
+    height: 100%;
+    border-radius: 20px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+52,ff5c5c+100;Red+3D+%231 */
+    background: #febbbb;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #febbbb 0%, #fe9090 52%, #ff5c5c 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #febbbb 0%, #fe9090 52%, #ff5c5c 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #febbbb 0%, #fe9090 52%, #ff5c5c 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#febbbb', endColorstr='#ff5c5c', GradientType=0);
+    /* IE6-9 */
+  }
+
+  #result{
+    display: none;
+  }
+  .share{
+    color: white;
+    background-color: #FEE500;
+    border: 0px;
+    font-size: 20px;
+  }
+  .share:hover, .share:focus {
+    background-color: white;
+    color: #FEE500;
+  }

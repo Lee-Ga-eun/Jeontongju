@@ -1,0 +1,34 @@
+
+#nav-item1{
+    position: absolute;
+    top:0%;    
+    left:0%;
+    width: 100%;
+    height: 8%;
+    background-color: rgb(236, 229, 229);
+}
+#test1_div{
+    
+}
+#test2_div{
+    
+}
+
+.navbar-nav{
+    float: right;
+    
+}
+.nav-link{
+    text-decoration-line: none;
+   
+    padding: 1%;
+}
+
+.nav-link1{
+    text-decoration-line: none;
+    
+}
+i{
+    color: black;
+}
+img{ width : 30px; height : 30px; }

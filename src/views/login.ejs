@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="../public/login.css">
+</head>
+<body>
+
+    <%- include('nav.html') %>  <!-- 상대경로의 html삽입-->
+    
+    <h1>로그인</h1>
+    <form action="/api/auth/login" method="POST">
+        <p>
+            <label for="id">ID</label>
+            <input type="text" name="id" id="id" placeholder="ID">
+        </p>
+        <p>
+            <label for="pw">비밀번호</label>
+            <input type="password" name="password" id="pw" placeholder="비밀번호">
+        </p>
+        <p>
+            <input type="submit" value="로그인">
+        </p>
+    </form>
+</body>
+</html>
