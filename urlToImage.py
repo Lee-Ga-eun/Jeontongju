@@ -36,12 +36,12 @@ def urlToImage():
             print("오류가 발생한 전통주 명",name)
 
         img=Image.open(urlopen(url_)) # 이미지로 변환 완료
-        img.save('uploads/images_jeontongju/'+name+'.BMP','BMP') # 전통주명과 일치하게 이미지 변환
+        img.save('uploads/images/'+name+'.BMP','BMP') # 전통주명과 일치하게 이미지 변환
         # db에 넣기
         #
 
         if present[0]=='338': # 마지막 행 종료
-            img.save('uploads/images_jeontongju/'+name+'.BMP','BMP') # 전통주명과 일치하게 이미지 변환
+            img.save('uploads/images/'+name+'.BMP','BMP') # 전통주명과 일치하게 이미지 변환
             # db에 넣기
             #
             break
