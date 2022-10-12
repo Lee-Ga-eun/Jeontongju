@@ -32,7 +32,7 @@ def urlToImage():
     
     return 0
 
-urlToImage() #실행
+urlToImage() #실행#
 
 
 
