@@ -3,7 +3,14 @@ import pandas as pd
 import csv
 from PIL import Image
 from urllib.error import HTTPError 
+from pymongo import MongoClient
 
+MONGO_URI='mongodb+srv://user:1234@cluster0.phopimv.mongodb.net/?retryWrites=true&w=majority'
+
+client = MongoClient(MONGO_URI)
+db = client.get_database('project')
+
+# db.drinks 컬렉션명: drinks
 
 # 1. 모든 inner.csv 파일 행을 읽는다
 # 2. 한 행마다, url을 찾고 이 url을 이미지로 변경한 것을 img 변수에 저장한다
