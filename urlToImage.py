@@ -60,6 +60,8 @@ def urlToImage():
 urlToImage() #실행#
 
 
+newUrl='https://terms.naver.com/imageDetail.naver?docId=5804479&imageUrl=https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F4776_000_2%2F20190726153119003_6MNBJWRWG.jpg%2Ffe87_366_i1.jpg%3Ftype%3Dm4500_4500_fst_n%26wm%3DY&cid=58637&categoryId=58655'
+origin_url='https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F4776_000_2%2F20190726153119003_6MNBJWRWG.jpg%2Ffe87_366_i1.jpg%3Ftype%3Dw450_fst_n%22&twidth=226&theight=226&opts=10'
 
 
 
